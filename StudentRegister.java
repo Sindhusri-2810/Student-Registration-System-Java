@@ -1,6 +1,4 @@
-
 package com.student;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -31,32 +29,26 @@ public class StudentRegister {
                 "root",
                 "root"
             );
+String query = "INSERT INTO students(roll, name, dept) VALUES (?, ?, ?)";
+ PreparedStatement pst = con.prepareStatement(query);
 
-            
-
-            String query = "INSERT INTO students(roll, name, dept) VALUES (?, ?, ?)";
-            PreparedStatement pst = con.prepareStatement(query);
-
-            pst.setInt(1, roll);
-            pst.setString(2, name);
-            pst.setString(3, dept);
-
-            pst.executeUpdate();
-
-            
-
-                System.out.println("Student Registered Successfully");
+ pst.setInt(1, roll);
+ pst.setString(2, name);
+ pst.setString(3, dept);
+ pst.executeUpdate();
+ System.out.println("Student Registered Successfully");
                 
 
             pst.close();
             con.close();
             sc.close();
 
-        } catch (Exception e) {
-            
-            e.printStackTrace();
+        }
+        catch (Exception e) {
+              e.printStackTrace();
         }
     }
 }
+
 
 
