@@ -43,7 +43,7 @@ SAMPLE OUTPUT:
    Sindhu
    Enter Department:
    CSE
-   Student Registerd Succesfully
+   
 
 Student Registered Successfully
 ID   : 1
