@@ -2,7 +2,6 @@ package com.student;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class StudentRegister {
@@ -49,6 +48,7 @@ String query = "INSERT INTO students(roll, name, dept) VALUES (?, ?, ?)";
         }
     }
 }
+
 
 
 
