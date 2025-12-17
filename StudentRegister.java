@@ -35,20 +35,21 @@ String query = "INSERT INTO students(roll, name, dept) VALUES (?, ?, ?)";
  pst.setString(2, name);
  pst.setString(3, dept);
  pst.executeUpdate();
- System.out.println("Student Registered Successfully");
-                
+  System.out.println("\n Student Registered Successfully");
+            int id=1;
+                System.out.println("ID   : " + id);
+                System.out.println("Roll : " + roll);
+                System.out.println("Name : " + name);
+                System.out.println("Dept : " + dept);
+             
 
             pst.close();
             con.close();
             sc.close();
 
-        }
-        catch (Exception e) {
-              e.printStackTrace();
+        } catch (Exception e) {
+            
         }
     }
 }
-
-
-
 
